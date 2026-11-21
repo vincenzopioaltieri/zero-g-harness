@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+if [ ! -f AGENTS.md ]; then
+  cp "$HOME/.gemini/config/templates/AGENTS.md.template" AGENTS.md
+  echo "[OK] Created AGENTS.md from template."
+fi
+ln -sf AGENTS.md GEMINI.md
+mkdir -p .agents/{rules,skills,agents}
+if [ -d .git ]; then
+  grep -qxF "GEMINI.md" .git/info/exclude || echo "GEMINI.md" >> .git/info/exclude
+fi
+echo "[OK] Repository ready. Open VS Code or agy and run /setup-matt-pocock-skills."

@@ -1,0 +1,17 @@
+# Private license notes & historical local validation report (never commit)
+CREDITS.md
+Validazione Architettura AI Coding Antigravity.md
+
+# Local backups, archives, and OS clutter
+*.bak
+*.bak.*
+*.tar.gz
+.DS_Store
+
+# Secrets & runtime state
+.env
+.env.*
+config.json
+*.db
+*.db-shm
+*.db-wal

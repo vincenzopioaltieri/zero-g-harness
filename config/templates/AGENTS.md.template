@@ -1,0 +1,14 @@
+# Project Agent Instructions
+
+## Stack & Architecture
+- Language / Runtime: <!-- e.g. C++20 / Python 3.12 / Rust -->
+- Key directories: <!-- e.g. src/, tests/, docs/ -->
+
+## Build, Test & Lint Commands
+- Build: `<!-- e.g. cmake --build build -->`
+- Test: `<!-- e.g. pytest / ctest --test-dir build -->`
+- Lint / Format: `<!-- e.g. ruff check . / clang-format -->`
+
+## Project Conventions
+- Keep changes minimal and scoped to the task.
+- Never commit secrets, `.env` files, or build artifacts.

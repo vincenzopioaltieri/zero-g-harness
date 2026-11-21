@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+BRANCH_NAME="${1:-}"
+if [ -z "$BRANCH_NAME" ]; then
+  echo "Usage: ai-worktree <feature-name>"
+  exit 1
+fi
+REPO_NAME=$(basename "$(git rev-parse --show-toplevel)")
+WT_PATH="../${REPO_NAME}-${BRANCH_NAME}"
+git worktree add -b "feat/${BRANCH_NAME}" "$WT_PATH"
+(cd "$WT_PATH" && ai-init)
+echo "[OK] Isolated worktree created at: $WT_PATH"

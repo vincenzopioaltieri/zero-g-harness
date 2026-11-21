@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -e
+TARGET="${1:-HEAD}"
+echo "Starting adversarial code review (Claude/GPT quota pool)..."
+agy -p "Run a rigorous code review on the changes in 'git diff $TARGET' against AGENTS.md. Look for logic bugs, security vulnerabilities, regressions, and missing tests. Cite exact file:line for every finding." --model "claude-opus-5-5-high"
