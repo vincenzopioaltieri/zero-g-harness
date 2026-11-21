@@ -25,6 +25,7 @@ This setup combines **context compression**, **isolated subagents**, and **anti-
 | :--- | :--- |
 | **Shell Compression (`RTK`)** | Transparently filters noisy `git`, build, and test output before it enters the prompt. |
 | **On-Demand Indexing (`Context Mode` + `Repomix`)** | Keeps large logs, PDFs (SQLite FTS5), and huge repos (Tree-sitter) out of chat history. |
+| **Live Library Docs (`Context7` + `gemini-api-docs`)** | Fetches version-accurate docs via zero-install remote MCPs instead of relying on stale model memory. |
 | **Anti-Overengineering (`GEMINI.md` + `Ponytail`)** | Cuts unnecessary boilerplate and abstractions while preserving security & trust-boundary checks. |
 | **Context Isolation & Quota Routing** | Pairs `Orchestrator (Neon)` + `Gemini 4 Hydrogen` for dev, `code-auditor` for fresh-eyes audits, and `ai-review` (`claude-opus-5-5-high`) on the separate Claude/GPT quota pool. |
 | **Zero-Token Slash Skills** | Slash-command-only skills (`disable-model-invocation: true`) consume **0 tokens** in the system prompt until called. |
@@ -70,7 +71,7 @@ flowchart TD
 ### What's Included
 - **4 custom subagents** (`config/agents/`): `codebase-explorer`, `code-implementer`, `test-runner`, `code-auditor`.
 - **Global rules & template**: `config/GEMINI.md` + `config/templates/AGENTS.md.template`.
-- **MCP config** (`config/mcp_config.json`): `context-mode`, `repomix`, `gemini-api-docs`.
+- **MCP config** (`config/mcp_config.json`): `context-mode`, `repomix`, `context7`, `gemini-api-docs`.
 - **3 CLI helpers** (`bin/`): `ai-init` (repo scaffolding), `ai-review` (adversarial diff review on Claude/GPT pool), `ai-worktree` (parallel Git worktrees).
 - **Optional modules** (`config/optional/`): `cpp-embedded-gem5.md` rule and `academic-tutor` skill.
 
@@ -89,6 +90,9 @@ cd zero-g-harness
 # Full setup (symlinks + upstream tools & skills)
 ./install.sh
 
+# Lightweight setup (GEMINI.md, RTK, Ponytail, ai-*, code-auditor, test-runner, remote docs MCP)
+./install.sh --minimal
+
 # Include optional embedded / university modules
 ./install.sh --with-optional
 
@@ -98,9 +102,10 @@ cd zero-g-harness
 
 Then select **`Orchestrator (Neon)`** in VS Code (or `/model` in `agy`) and reload (`Developer: Reload Window` in VS Code / `/skills reload` in `agy`).
 
-### Maintenance & Uninstall
+### Health Check, Maintenance & Uninstall
 
 ```bash
+./install.sh --doctor      # Verify symlinks, RTK, MCP JSON, binaries & live agy model IDs
 ./install.sh --update      # Update upstream MCP servers & git plugins
 ./install.sh --uninstall   # Detach symlinks into standalone copies
 ```
@@ -114,6 +119,7 @@ This repository only contains original configuration files, custom subagents, an
 - [RTK (Rust Token Killer)](https://github.com/rtk-ai/rtk) — Apache-2.0 / BUSL-1.1
 - [Context Mode](https://github.com/mksglu/context-mode) — Elastic License 2.0 (ELv2)
 - [Repomix](https://github.com/yamadashy/repomix) — MIT License
+- [Context7](https://github.com/upstash/context7) — MIT License
 - [Google Gemini Skills](https://github.com/google-gemini/gemini-skills) — Apache-2.0 License
 - [Matt Pocock Skills](https://github.com/mattpocock/skills) — MIT License
 - [Ponytail](https://github.com/DietrichGebert/ponytail) — MIT License

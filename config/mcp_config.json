@@ -14,6 +14,9 @@
         "--mcp"
       ]
     },
+    "context7": {
+      "serverUrl": "https://mcp.context7.com/mcp"
+    },
     "gemini-api-docs": {
       "serverUrl": "https://gemini-api-docs-mcp.dev"
     }

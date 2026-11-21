@@ -78,7 +78,8 @@ This document records the **verified architecture**, design rationale, skill dep
 ### 4.2 MCP Servers (`~/.gemini/config/mcp_config.json`)
 1. `context-mode` (`context-mode mcp --agent gemini`): `ctx_execute`, `ctx_batch`, `ctx_index`, `ctx_search`, `ctx_resume`, `ctx_stats`, `ctx_doctor`, `ctx_upgrade`, `ctx_purge`.
 2. `repomix` (`repomix --mcp`): `pack_codebase`, `read_repomix_output`, `grep_repomix_output`, `pack_remote_repository`, `generate_skill`, `attach_packed_output`.
-3. `gemini-api-docs` (`https://gemini-api-docs-mcp.dev`): `gemini_search_docs`, `gemini_get_doc`.
+3. `context7` (`https://mcp.context7.com/mcp`): `resolve-library-id`, `query-docs` (version-accurate docs for external libraries/frameworks).
+4. `gemini-api-docs` (`https://gemini-api-docs-mcp.dev`): `gemini_search_docs`, `gemini_get_doc`.
 
 All MCP tools are lazy-loaded. `mcp_config.json` is **copied** (not symlinked) by `install.sh` because MCP installers may rewrite it atomically.
 

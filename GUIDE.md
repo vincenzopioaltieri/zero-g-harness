@@ -83,7 +83,7 @@ The system uses **context isolation** so the main conversation is never flooded 
 ```text
 ~/.gemini/config/                         # Single global source (VS Code + agy CLI)
 ├── GEMINI.md                             # Global always_on rules (symlinked from repo)
-├── mcp_config.json                       # MCP servers (context-mode, repomix, gemini-api-docs)
+├── mcp_config.json                       # MCP servers (context-mode, repomix, context7, gemini-api-docs)
 ├── config.json                           # Runtime state (NEVER commit to Git)
 ├── agents/                               # 4 custom subagents (symlinked from repo)
 │   ├── codebase-explorer.md              # model: gemini-4-hydrogen-low  | shell: off
@@ -94,7 +94,7 @@ The system uses **context isolation** so the main conversation is never flooded 
 │   ├── ponytail.md                       # trigger: always_on (installed upstream)
 │   └── cpp-embedded-gem5.md              # trigger: model_decision (optional)
 ├── plugins/
-│   ├── rtk/                              # Installed by rtk init --agent antigravity
+│   ├── rtk/                              # Installed by rtk init -g --agent antigravity
 │   └── gemini-skills/                    # Official Google git plugin (4 Gemini API skills)
 ├── skills/                               # Upstream skills (Matt Pocock, Ponytail, Context Mode) + optional custom skills
 └── templates/
