@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/banner.svg" alt="antigravity-harness banner" width="100%" />
+  <img src="./assets/banner.svg" alt="zero-g-harness banner" width="100%" />
 </p>
 
 <p align="center">
@@ -83,8 +83,8 @@ Deep dive: [GUIDE.md](./GUIDE.md) • [STRUCTURE.md](./STRUCTURE.md)
 **Prerequisites:** Linux (tested on Pop!\_OS 24.04), [Google Antigravity](https://antigravity.google) (VS Code extension and/or `agy` CLI), Node.js / `npm`.
 
 ```bash
-git clone https://github.com/vincenzopioaltieri/antigravity-harness.git
-cd antigravity-harness
+git clone https://github.com/vincenzopioaltieri/zero-g-harness.git
+cd zero-g-harness
 
 # Full setup (symlinks + upstream tools & skills)
 ./install.sh
