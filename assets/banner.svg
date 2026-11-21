@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260" role="img" aria-label="antigravity-harness banner">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090E1A"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="18%" cy="50%" r="38%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.28"/>
+      <stop offset="60%" stop-color="#6366F1" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#090E1A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="85%" cy="20%" r="35%">
+      <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#090E1A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1E293B" stroke-width="0.7" stroke-opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <!-- Card background -->
+  <rect width="900" height="260" rx="18" fill="url(#bg)"/>
+  <rect width="900" height="260" rx="18" fill="url(#grid)"/>
+  <rect width="900" height="260" rx="18" fill="url(#glow1)"/>
+  <rect width="900" height="260" rx="18" fill="url(#glow2)"/>
+  <rect x="1" y="1" width="898" height="258" rx="17" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- Original geometric zero-G orbit emblem (non-trademarked) -->
+  <g transform="translate(132, 130)">
+    <circle r="62" fill="none" stroke="#334155" stroke-width="1" stroke-dasharray="4 5"/>
+    <ellipse rx="66" ry="24" fill="none" stroke="url(#accent)" stroke-width="2.2" transform="rotate(-26)"/>
+    <ellipse rx="66" ry="24" fill="none" stroke="#38BDF8" stroke-width="1.4" stroke-opacity="0.55" transform="rotate(34)"/>
+    <!-- Stylized upward delta/chevron representing lift & minimalism -->
+    <circle r="22" fill="url(#core)" fill-opacity="0.18" stroke="url(#accent)" stroke-width="1.8"/>
+    <path d="M 0 -11 L 10 9 L 4 9 L 0 1 L -4 9 L -10 9 Z" fill="#F8FAFC"/>
+    <!-- Orbiting satellite nodes -->
+    <circle cx="52" cy="-28" r="5" fill="#22D3EE"/>
+    <circle cx="-50" cy="30" r="4" fill="#A78BFA"/>
+    <circle cx="38" cy="40" r="3.5" fill="#34D399"/>
+  </g>
+
+  <!-- Header tag -->
+  <rect x="242" y="48" width="298" height="26" rx="13" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <circle cx="258" cy="61" r="4" fill="#34D399"/>
+  <text x="270" y="65" fill="#CBD5E1" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11.5" font-weight="600" letter-spacing="1.1">COMMUNITY HARNESS • VS CODE + AGY CLI</text>
+
+  <!-- Main Title -->
+  <text x="242" y="128" fill="#F8FAFC" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="42" font-weight="800" letter-spacing="-0.8">antigravity-harness</text>
+
+  <!-- Accent underline -->
+  <rect x="242" y="140" width="120" height="3.5" rx="2" fill="url(#accent)"/>
+
+  <!-- Subtitle -->
+  <text x="242" y="172" fill="#94A3B8" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="16" font-weight="400">Multi-Agent AI Coding Setup • Token Compression • Zero Extra API Keys</text>
+
+  <!-- Feature Pills -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600">
+    <rect x="242" y="194" width="96" height="28" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="290" y="212" text-anchor="middle" fill="#38BDF8">RTK Hook</text>
+
+    <rect x="348" y="194" width="152" height="28" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="424" y="212" text-anchor="middle" fill="#22D3EE">Context Mode FTS5</text>
+
+    <rect x="510" y="194" width="144" height="28" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="582" y="212" text-anchor="middle" fill="#818CF8">Repomix Compact</text>
+
+    <rect x="664" y="194" width="134" height="28" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="731" y="212" text-anchor="middle" fill="#A78BFA">Ponytail YAGNI</text>
+  </g>
+</svg>
